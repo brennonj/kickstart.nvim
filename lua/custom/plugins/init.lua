@@ -104,19 +104,19 @@ return {
       end, { desc = 'Harpoon toggle menu' })
 
       -- Jump to specific files
-      vim.keymap.set('n', '<C-h>', function()
+      vim.keymap.set('n', '<leader>1', function()
         harpoon:list():select(1)
       end, { desc = 'Harpoon file 1' })
 
-      vim.keymap.set('n', '<C-t>', function()
+      vim.keymap.set('n', '<leader>2', function()
         harpoon:list():select(2)
       end, { desc = 'Harpoon file 2' })
 
-      vim.keymap.set('n', '<C-n>', function()
+      vim.keymap.set('n', '<leader>3', function()
         harpoon:list():select(3)
       end, { desc = 'Harpoon file 3' })
 
-      vim.keymap.set('n', '<C-s>', function()
+      vim.keymap.set('n', '<leader>4', function()
         harpoon:list():select(4)
       end, { desc = 'Harpoon file 4' })
 
@@ -128,6 +128,17 @@ return {
       vim.keymap.set('n', '<C-S-N>', function()
         harpoon:list():next()
       end, { desc = 'Harpoon next' })
+    end,
+  },
+  {
+    'pwntester/octo.nvim',
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      'nvim-telescope/telescope.nvim',
+      'kyazdani42/nvim-web-devicons',
+    },
+    config = function()
+      require('octo').setup()
     end,
   },
 }
