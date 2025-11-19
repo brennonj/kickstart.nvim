@@ -30,7 +30,7 @@ return {
           hide_during_completion = true,
           debounce = 75,
           keymap = {
-            accept = '<M-l>',
+            accept = '<C-y>',
             accept_word = false,
             accept_line = false,
             next = '<M-]>',
@@ -63,7 +63,6 @@ return {
     },
     build = 'make tiktoken', -- Only on MacOS or Linux
     opts = {
-      model = 'claude-3.5-sonnet', -- Use Claude 3.5 Sonnet
       debug = false, -- Enable debugging
       -- See Configuration section for rest
     },
